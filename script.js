@@ -6,8 +6,8 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
 });
 
 const topRoles = [
-  { text: "Full Stack", color: "white-text" },
-  { text: "WEB", color: "white-text" }
+  { text: "A Full Stack", color: "white-text" },
+  { text: "A WEB", color: "white-text" }
 ];
 
 const bottomRoles = [
@@ -77,3 +77,4 @@ typeTextSync(
 
 // interval otomatis jalan
 setInterval(changeRoles, 5000);
+
