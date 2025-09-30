@@ -78,3 +78,20 @@ typeTextSync(
 // interval otomatis jalan
 setInterval(changeRoles, 5000);
 
+// Pilih semua section yang punya h2
+const sections = document.querySelectorAll('.about, .project, .contact');
+
+const observerOptions = {
+  threshold: 0.3  // section terlihat 30%
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('section-visible');
+    }
+  });
+}, observerOptions);
+
+// Apply observer ke setiap section
+sections.forEach(section => observer.observe(section));
