@@ -188,10 +188,10 @@
       and let's explore what we can build together.
     </p>
 
-    <form class="contact-form" action="mailto:alvinnabilthoriq@gmail.com" method="post" enctype="text/plain">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" rows="5" required></textarea>
+    <form class="contact-form" onsubmit="sendMail(event)">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -220,4 +220,5 @@
 
 </body>
 </html>
+
 
