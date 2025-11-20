@@ -95,3 +95,25 @@ const observer = new IntersectionObserver((entries) => {
 
 // Apply observer ke setiap section
 sections.forEach(section => observer.observe(section));
+
+// Email Function
+
+function sendMail(event) {
+  event.preventDefault(); // Prevent the form from trying to do a normal submit
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+// Construct the mailto link
+  const mailtoLink =
+    "mailto:alvin.thoriq@binus.ac.id"
+    + "?subject=" + encodeURIComponent("Message from " + name)
+    + "&body=" + encodeURIComponent(
+        "Name: " + name + "\n"
+        + "Email: " + email + "\n\n"
+        + message
+      );
+
+  window.location.href = mailtoLink; 
+    }
