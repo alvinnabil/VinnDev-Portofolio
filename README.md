@@ -5,7 +5,6 @@ A personal developer portfolio website showcasing my skills, projects, and exper
 🔗 **Live Demo**: [https://vinndev.vercel.app](https://vinndev.vercel.app)
 📦 **Repository**: [https://github.com/alvinnabil/VinnDev-Portofolio](https://github.com/alvinnabil/VinnDev-Portofolio)
 
----
 
 ## 📖 About the Project
 
@@ -17,7 +16,6 @@ The main goals of this project are:
 * To showcase real projects and technical skills
 * To practice clean UI design and front‑end fundamentals
 
----
 
 ## ✨ Features
 
@@ -28,7 +26,6 @@ The main goals of this project are:
 * Clean and simple UI
 * Deployed and accessible online
 
----
 
 ## 🛠️ Tech Stack
 
@@ -37,7 +34,6 @@ The main goals of this project are:
 * **JavaScript** – interactivity and logic
 * **Vercel** – deployment and hosting
 
----
 
 ## 📂 Project Structure
 
@@ -53,8 +49,6 @@ VinnDev-Portofolio/
 │   └── icons/
 └── README.md
 ```
-
----
 
 ## 🚀 Getting Started
 
@@ -79,34 +73,18 @@ Simply open the `index.html` file in your browser:
 * Double‑click `index.html`, **or**
 * Use a live server extension (recommended)
 
----
 
-## 🌱 Future Improvements
-
-Planned enhancements for this portfolio:
-
-* Add more real-world projects
-* Improve animations and UI interactions
-* Dark mode support
-* Add downloadable CV / Resume
-* Migrate to React for better scalability
-
----
 
 ## 👤 Author
 
 **Alvin Nabil Thoriq**
-Software Engineering Student | Web Developer
+Software Engineering Student | Full Stack Developer
 
 * GitHub: [https://github.com/alvinnabil](https://github.com/alvinnabil)
 * Portfolio: [https://vinndev.vercel.app](https://vinndev.vercel.app)
 
----
 
 ## 📄 License
 
 This project is open source and available for learning and personal use.
 
----
-
-⭐ If you like this project, feel free to give it a star!
