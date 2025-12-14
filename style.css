@@ -446,7 +446,7 @@ section {
   width: 100%;
   max-width: 400px;
   margin-bottom: 15px;
-  background: #121212;
+  background: #1e1e1e;
   padding: 12px;
   border-radius: 12px;
   cursor: pointer; 
@@ -591,6 +591,7 @@ footer {
 .footer-socials a:hover::after {
   width: 100%;
 }
+
 
 
 
