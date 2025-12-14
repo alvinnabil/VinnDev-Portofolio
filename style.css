@@ -425,7 +425,7 @@ section {
   opacity: 0.9;
 }
 .project-card {
-  background: #1e1e1e;
+  background: #121212;
   border-radius: 8px;
   padding: 20px;
   display: inline-block;
@@ -591,6 +591,7 @@ footer {
 .footer-socials a:hover::after {
   width: 100%;
 }
+
 
 
 
