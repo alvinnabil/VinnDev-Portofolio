@@ -445,10 +445,10 @@ section {
 .project-card img {
   width: 100%;
   max-width: 400px;
-  border-radius: 10px;
   margin-bottom: 15px;
-  padding: 10px;
   background: #121212;
+  padding: 12px;
+  border-radius: 12px;
   cursor: pointer; 
   transition: transform 0.4s;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -591,5 +591,6 @@ footer {
 .footer-socials a:hover::after {
   width: 100%;
 }
+
 
 
