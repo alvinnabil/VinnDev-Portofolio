@@ -42,9 +42,9 @@ VinnDev-Portofolio/
 ├── index.html
 ├── style.css
 ├── script.js
-├── assets/
-|── images/
-│── icons/
+├── assets
+|── images
+│── icons
 └── README.md
 ```
 
@@ -85,6 +85,7 @@ Software Engineering Student | Full Stack Developer
 ## 📄 License
 
 This project is open source and available for learning and personal use.
+
 
 
 
