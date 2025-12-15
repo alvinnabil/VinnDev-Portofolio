@@ -40,10 +40,8 @@ The main goals of this project are:
 ```text
 VinnDev-Portofolio/
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
+├── style.css
+├── script.js
 ├── assets/
 |── images/
 │── icons/
@@ -87,5 +85,6 @@ Software Engineering Student | Full Stack Developer
 ## 📄 License
 
 This project is open source and available for learning and personal use.
+
 
 
