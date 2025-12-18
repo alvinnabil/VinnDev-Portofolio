@@ -28,7 +28,7 @@ section {
 .logo {
   font-size: 26px;
   font-weight: 800;
-  letter-spacing: 0.5px;color: ##7ab7ff;          
+  letter-spacing: 0.5px;color: #7ab7ff;          
   text-decoration: none;
 }
 
@@ -586,6 +586,7 @@ footer {
     margin-right: 16px;
   }
 }
+
 
 
 
