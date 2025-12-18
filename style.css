@@ -15,126 +15,79 @@ body {
 section {
   padding: 100px 60px; 
 }
-
-/* ================================================ NAVBAR ============================================== */
+/* =============================== NAVBAR =============================== */
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  flex-wrap: wrap; 
-  gap: 10px;
+  background: transparent;
 }
+
+/* Logo */
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
+  letter-spacing: 0.5px;
 }
+
 .logo span {
   color: #7ab7ff;
 }
-@media (min-width: 768px) {
-  .logo {
-    font-size: 26px;
-  }
-}
-@media (min-width: 1024px) {
-  .logo {
-    font-size: 32px;
-  }
-}
 
+/* Nav Links */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 15px;
+  gap: 36px;
 }
+
 .nav-links a {
   position: relative;
   text-decoration: none;
   color: #e0e0e0;
   font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s, transform o.3s;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
-@media (min-width: 768px) {
-  .nav-links a {
-    font-size: 18px;
-  }
-}
-@media (min-width: 1024px) {
-  .nav-links a {
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .nav-links {
-    gap: 35px; 
-  }
-}
-@media (min-width: 1024px) {
-  .nav-links {
-    gap: 40px; 
-  }
-}
-.nav-links a:hover {
-  color: #7ab7ff;
-  transform: scaleX(1.5);
-}
+
+/* Hover underline */
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   width: 0%;
   height: 2px;
-  background-color: #7ab7ff; 
-  transition: width 0.3s ease-in-out;
+  background: #7ab7ff;
+  transition: width 0.3s ease;
 }
+
+.nav-links a:hover {
+  color: #7ab7ff;
+}
+
 .nav-links a:hover::after {
-  width: 100%; 
+  width: 100%;
 }
 
-/* Navbar Responsif Mobile */
-@media (max-width: 900px) {
-  .navbar {
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    padding: 20px 20px;
-    gap: 10px;
-  }
-  .logo {
-    order: 1; 
-  }
-  .socials {
-    order: 2; 
-  }
-  .nav-links {
-    order: 3; 
-    width: 100%;
-    justify-content: center; 
-    margin-top: 10px;
-  }
-  .nav-links a {
-    margin: 0 15px; 
-  }
-}
-
+/* Social Icons */
 .socials {
   display: flex;
   align-items: center;
-  gap: 5px; 
+  gap: 12px;
 }
+
 .socials a {
   position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;   
-  height: 50px;  
-  border-radius: 50%;
-  overflow: hidden;
 }
+
 .socials a::before {
   content: "";
   position: absolute;
@@ -142,21 +95,36 @@ section {
   border-radius: 50%;
   border: 2px solid #7ab7ff;
   transform: scale(0);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .socials a:hover::before {
   transform: scale(1);
-  box-shadow: 0 0 15px #7ab7ff; 
+  box-shadow: 0 0 12px #7ab7ff;
 }
-.socials a img {
-  width: 28px;  
-  z-index: 1;
+
+.socials img {
+  width: 22px;
   filter: brightness(0) invert(1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
+  z-index: 1;
 }
+
 .socials a:hover img {
-  transform: scale(1.15); 
+  transform: scale(1.15);
 }
+
+/* ============================ RESPONSIVE ============================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    display: none; /* disembunyikan untuk mobile clean */
+  }
+}
+
 
 /* ================================================ HERO SECTION ============================================== */
 .hero {
@@ -616,6 +584,7 @@ footer {
     margin-right: 16px;
   }
 }
+
 
 
 
