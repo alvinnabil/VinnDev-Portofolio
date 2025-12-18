@@ -502,17 +502,17 @@ section {
 
 /* ================================================ CONTACT ME ============================================== */
 .contact {
-  padding: 60px;
+  padding: 80px 60px;
   text-align: center;
 }
 .contact h2 {
   font-size: 32px;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .contact p {
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 56px;
   opacity: 0.9;
 }
 .contact-form {
@@ -520,7 +520,7 @@ section {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 .contact-form input,
 .contact-form textarea {
@@ -538,7 +538,7 @@ section {
   border-bottom: 2px solid #7ab7ff;
 }
 .contact-form button {
-  margin-top: 15px;
+  margin-top: 24px;
   padding: 12px;
   background: transparent;
   border: 2px solid #7ab7ff;
@@ -618,6 +618,7 @@ footer {
 .footer-socials a:hover::after {
   width: 100%;
 }
+
 
 
 
