@@ -5,115 +5,107 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
   this.reset();
 });
 
-const topRoles = [
-  { text: "A Full Stack", color: "white-text" },
-  { text: "A WEB", color: "white-text" }
+// ----- Role Animation -----
+const roles = [
+  {
+    top: { text: "A Full Stack", class: "white-text" },
+    bottom: { text: "Developer", class: "blue-text" }
+  },
+  {
+    top: { text: "A WEB", class: "white-text" },
+    bottom: { text: "Designer", class: "blue-text" }
+  }
 ];
 
-const bottomRoles = [
-  { text: "Developer", color: "blue-text" },
-  { text: "Designer", color: "blue-text" }
-];
-
-let index = 0;
+let currentIndex = 0;
 const roleTop = document.getElementById("role-top");
 const roleBottom = document.getElementById("role-bottom");
 
-function typeTextSync(textTop, classTop, textBottom, classBottom, callback) {
+function typeText(topText, bottomText, callback) {
   let i = 0;
-  roleTop.className = classTop;
-  roleBottom.className = classBottom;
   roleTop.textContent = "";
   roleBottom.textContent = "";
 
-  let interval = setInterval(() => {
-    roleTop.textContent += textTop[i] || "";
-    roleBottom.textContent += textBottom[i] || "";
+  const interval = setInterval(() => {
+    roleTop.textContent += topText[i] || "";
+    roleBottom.textContent += bottomText[i] || "";
     i++;
-    if (i >= Math.max(textTop.length, textBottom.length)) {
+
+    if (i >= Math.max(topText.length, bottomText.length)) {
       clearInterval(interval);
-      if (callback) {
-        setTimeout(callback, 1500); // delay 1.5 detik sebelum hapus
-      }
+      setTimeout(callback, 3000);
     }
   }, 100);
 }
 
-function deleteTextSync(callback) {
-  let textTop = roleTop.textContent;
-  let textBottom = roleBottom.textContent;
-  let i = Math.max(textTop.length, textBottom.length);
+function deleteText(callback) {
+  let topText = roleTop.textContent;
+  let bottomText = roleBottom.textContent;
+  let i = Math.max(topText.length, bottomText.length);
 
-  let interval = setInterval(() => {
-    roleTop.textContent = textTop.substring(0, i - 1);
-    roleBottom.textContent = textBottom.substring(0, i - 1);
+  const interval = setInterval(() => {
+    roleTop.textContent = topText.slice(0, i - 1);
+    roleBottom.textContent = bottomText.slice(0, i - 1);
     i--;
+
     if (i <= 0) {
       clearInterval(interval);
-      if (callback) callback();
+      callback();
     }
   }, 50);
 }
 
-function changeRoles() {
-  deleteTextSync(() => {
-    index = (index + 1) % topRoles.length;
-    typeTextSync(
-      topRoles[index].text,
-      topRoles[index].color,
-      bottomRoles[index].text,
-      bottomRoles[index].color
-    );
+function playRoleAnimation() {
+  const role = roles[currentIndex];
+
+  roleTop.className = role.top.class;
+  roleBottom.className = role.bottom.class;
+
+  typeText(role.top.text, role.bottom.text, () => {
+    deleteText(() => {
+      currentIndex = (currentIndex + 1) % roles.length;
+      playRoleAnimation(); // 🔁 loop aman
+    });
   });
 }
+// start animation
+playRoleAnimation();
 
-// pertama kali load
-typeTextSync(
-  topRoles[0].text,
-  topRoles[0].color,
-  bottomRoles[0].text,
-  bottomRoles[0].color
-);
 
-// interval otomatis jalan
-setInterval(changeRoles, 5000);
-
-// Pilih semua section yang punya h2
+// ----- Entry Animation -----
 const sections = document.querySelectorAll('.about, .project, .contact');
 
-const observerOptions = {
-  threshold: 0.3  // section terlihat 30%
-};
-
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('section-visible');
     }
   });
-}, observerOptions);
+}, { threshold: 0.3 });
 
-// Apply observer ke setiap section
 sections.forEach(section => observer.observe(section));
 
-// Email Function
 
+// ----- Email Function -----
 function sendMail(event) {
-  event.preventDefault(); // Prevent the form from trying to do a normal submit
+  event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-// Construct the mailto link
+  if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
   const mailtoLink =
-    "mailto:alvin.thoriq@binus.ac.id"
-    + "?subject=" + encodeURIComponent("Message from " + name)
-    + "&body=" + encodeURIComponent(
-        "Name: " + name + "\n"
-        + "Email: " + email + "\n\n"
-        + message
-      );
+    `mailto:alvin.thoriq@binus.ac.id` +
+    `?subject=${encodeURIComponent("Message from " + name)}` +
+    `&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    )}`;
 
-  window.location.href = mailtoLink; 
-    }
+  window.location.href = mailtoLink;
+}
+
