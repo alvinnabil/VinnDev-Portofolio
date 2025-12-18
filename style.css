@@ -16,8 +16,6 @@ section {
   padding: 100px 60px; 
 }
 
-
-
 /* ================================================ NAVBAR ============================================== */
 .navbar {
   display: flex;
@@ -159,8 +157,6 @@ section {
 .socials a:hover img {
   transform: scale(1.15); 
 }
-
-
 
 /* ================================================ HERO SECTION ============================================== */
 .hero {
@@ -316,11 +312,6 @@ section {
   }
 }
 
-
-
-
-
-
 /* ================================================ ABOUT ============================================== */
 .about {
   padding: 60px;
@@ -383,7 +374,6 @@ section {
   transform: scale(1.25);
 }
 
-
 @media (max-width: 900px) {
   .skills {
     flex-direction: column;
@@ -411,8 +401,6 @@ section {
     padding: 40px 20px;
   }
 }
-
-
 
 /* ================================================ PROJECT ============================================== */
 .project {
@@ -498,8 +486,6 @@ section {
   cursor: pointer;  
 }
 
-
-
 /* ================================================ CONTACT ME ============================================== */
 .contact {
   padding: 80px 60px;
@@ -553,13 +539,10 @@ section {
   color: #121212;
 }
 
-
-
-
 /* ================================================ FOOTER ============================================== */
 footer {
   background: #121212;
-  padding: 20px 60px;
+  padding: 40px 60px 24px;
 }
 .footer-container {
   display: flex;
@@ -574,15 +557,16 @@ footer {
   color: #7ab7ff;
 }
 .footer-socials a {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .footer-socials img {
   width: 28px;
   filter: brightness(0) invert(1);
-  transition: transform 0.3s;
+  transition: transform 0.3s opacity 0.3s;
 }
 .footer-socials img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  opacity: 0.8;
 }
 .footer-copy {
   max-width: 1000px;       
@@ -601,23 +585,13 @@ footer {
   font-size: 16px;
   transition: color 0.3s, transform 0.3s;
 }
-.footer-socials a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background-color: #7ab7ff;
-  transition: width 0.3s ease-in-out;
-}
+
 .footer-socials a:hover {
   color: #7ab7ff;
   transform: scale(1.05);
 }
-.footer-socials a:hover::after {
-  width: 100%;
-}
+
+
 
 
 
