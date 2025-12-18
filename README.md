@@ -76,16 +76,17 @@ Simply open the `index.html` file in your browser:
 ## 👤 Author
 
 **Alvin Nabil Thoriq**
-Software Engineering Student | Full Stack Developer
+Software Engineering Student At Binus University | Full Stack Developer
 
-* GitHub: [https://github.com/alvinnabil](https://github.com/alvinnabil)
-* Portfolio: [https://vinndev.vercel.app](https://vinndev.vercel.app)
-* LinkedIn : [www.linkedin.com/in/alvin-nabil-8972792a7](www.linkedin.com/in/alvin-nabil-8972792a7)
+* GitHub: [alvinnabil](https://github.com/alvinnabil)
+* Portfolio: [vinndev.vercel.app](https://vinndev.vercel.app)
+* LinkedIn : [alvin-nabil-8972792a7](www.linkedin.com/in/alvin-nabil-8972792a7)
 
 
 ## 📄 License
 
 This project is open source and available for learning and personal use.
+
 
 
 
