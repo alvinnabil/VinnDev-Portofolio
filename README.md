@@ -80,11 +80,13 @@ Software Engineering Student | Full Stack Developer
 
 * GitHub: [https://github.com/alvinnabil](https://github.com/alvinnabil)
 * Portfolio: [https://vinndev.vercel.app](https://vinndev.vercel.app)
+* LinkedIn : [www.linkedin.com/in/alvin-nabil-8972792a7]
 
 
 ## 📄 License
 
 This project is open source and available for learning and personal use.
+
 
 
 
