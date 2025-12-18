@@ -28,7 +28,8 @@ section {
 .logo {
   font-size: 26px;
   font-weight: 800;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.5px;color: #ffffff;          
+  text-decoration: none;
 }
 
 .logo span {
@@ -584,6 +585,7 @@ footer {
     margin-right: 16px;
   }
 }
+
 
 
 
